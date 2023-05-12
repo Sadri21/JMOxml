@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <ImageView
+        android:id="@+id/img_jmo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/jmo"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_notification"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/round_wallet_black_36"
+            app:tint="@color/md_grey_700"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="e-wallet"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_notification"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/round_notifications_black_36"
+        app:tint="@color/md_grey_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="24dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingVertical="24dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/img_jmo"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Program Layanan"
+                android:textColor="@color/md_blue_grey_900"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="16dp"
+                android:id="@+id/rv_program_layanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:elevation="4dp"
+                android:layout_marginHorizontal="16dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/md_green_100"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Program Lainnya"
+                        android:layout_centerInParent="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/md_green_700"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/round_arrow_forward_black_36"
+                        app:tint="@color/md_green_700"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Layanan Lainnya"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/md_blue_grey_900"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_main_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informasi"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/md_blue_grey_900"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="16dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:animateLayoutChanges="true" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/into_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:tabBackground="@drawable/tab_pager_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                app:tabPaddingStart="8dp"
+                app:tabPaddingEnd="8dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

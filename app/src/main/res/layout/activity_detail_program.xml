@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailProgramActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/title_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Program BPJamsostek"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/round_arrow_back_black_24"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/rl_toolbar"
+        android:layout_marginVertical="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_service"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jht"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_toEndOf="@id/img_service"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_service_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jaminan Hari Tia"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv_service_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anda sudah terdaftar di layanan ini"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/round_check_circle_black_36"
+                app:tint="@color/md_green_500"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"/>
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_grey_300"
+                android:layout_below="@id/img_service"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator1"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Berupa uang tunai yang besarnya merupakan nilai akumulasi iuran ditambah hasil pengembangannya"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card_content"
+        android:background="@color/white"
+        android:layout_marginTop="36dp"
+        app:tabIconTint="@color/md_green_600"
+        app:tabIndicatorColor="@color/md_green_600"
+        app:tabSelectedTextColor="@color/md_green_600"
+        app:tabTextColor="@color/md_grey_500" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

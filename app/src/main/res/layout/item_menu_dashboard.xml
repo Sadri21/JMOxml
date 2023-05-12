@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="4dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="@color/md_green_700"
+                android:src="@drawable/round_headset_mic_black_36"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info Program"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="8dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_below="@id/card_menu"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

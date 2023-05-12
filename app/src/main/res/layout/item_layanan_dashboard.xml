@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="16dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="4dp"
+    android:layout_marginVertical="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_service"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:src="@drawable/jht"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/img_service"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jaminan Hari Tia"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_service_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telah bergabung"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/round_check_circle_black_36"
+            app:tint="@color/md_green_500"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

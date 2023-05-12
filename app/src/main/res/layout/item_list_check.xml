@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/tv_check"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/round_check_circle_black_36"
+        app:tint="@color/md_green_700"/>
+
+    <TextView
+        android:id="@+id/tv_check_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_check"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="iafowoiawnfiofnio;wafnawi oifnawf ionfioa nfiofna"/>
+
+</RelativeLayout>
